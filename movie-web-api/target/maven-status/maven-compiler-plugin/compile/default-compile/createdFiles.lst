@@ -1,0 +1,16 @@
+com\pojo\UserLogin.class
+com\service\impl\MovieServiceImpl.class
+com\controller\MovieController.class
+com\common\utils\GeeTestLib.class
+com\pojo\Movie.class
+com\pojo\BaseResult.class
+com\dao\UserDao.class
+com\pojo\User.class
+com\service\MovieService.class
+com\controller\UserController.class
+com\dao\MovieDao.class
+com\common\config\SwaggerConfig.class
+com\common\utils\SerialUtils.class
+com\service\impl\UserServiceImpl.class
+com\pojo\PageSetting.class
+com\service\UserService.class
