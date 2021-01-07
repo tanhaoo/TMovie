@@ -2,6 +2,8 @@ package com.pojo;
 
 import lombok.Data;
 
+import java.util.Date;
+
 /**
  * @author TanHaooo
  * @date 2020/12/20 19:15
@@ -29,4 +31,17 @@ public class User {
      * 用户性别
      */
     private String sex;
+    /**
+     * 用户头像
+     */
+    private String img;
+    /**
+     * 用户注册时间
+     */
+    private Date created;
+    /**
+     * 用户更新时间
+     */
+    private Date updated;
+
 }

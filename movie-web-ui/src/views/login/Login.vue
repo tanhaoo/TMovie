@@ -11,7 +11,7 @@
               <el-input
                   v-model="login.account"
                   size="large"
-                  placeholder="手机号/邮箱"
+                  placeholder="用户名"
                   auto-complete="off"
               ></el-input>
             </el-form-item>

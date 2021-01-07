@@ -25,14 +25,14 @@ public class MovieController {
     private MovieService movieService;
 
     /**
-     * 获取所有影片
+     * 获取分页影片
      *
      * @param
      */
-    @ApiOperation("获取所有影片信息")
-    @PostMapping("getAllMovie")
-    public List<Movie> getAllMovie(@RequestBody PageSetting pageSetting) {
-        List<Movie> movieList = movieService.getAllMovie(pageSetting);
+    @ApiOperation("获取分页影片信息")
+    @PostMapping("getPageMovie")
+    public List<Movie> getPageMovie(@RequestBody PageSetting pageSetting) {
+        List<Movie> movieList = movieService.getPageMovie(pageSetting);
         return movieList;
     }
 

@@ -16,7 +16,7 @@ import java.util.List;
 public interface MovieDao {
 
     /**
-     * 查询所有电影
+     * 查询分页电影
      *
      * @return
      */

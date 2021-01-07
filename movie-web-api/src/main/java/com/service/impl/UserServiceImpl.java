@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
 import javax.servlet.http.HttpSession;
+import java.util.Date;
 
 /**
  * @author TanHaooo
@@ -26,6 +27,22 @@ public class UserServiceImpl implements UserService {
         String account = userLogin.getAccount();
         User user = useDao.selectByName(account);
         return md5Login(userLogin, user, session);
+    }
+
+    @Override
+    public BaseResult register(User user) {
+        user.setPassword(DigestUtils.md5DigestAsHex(user.getPassword().getBytes()));
+        user.setCreated(new Date());
+        user.setUpdated(new Date());
+        useDao.register(user);
+        return BaseResult.success("用户注册成功");
+    }
+
+    @Override
+    public BaseResult updateName(UserLogin userLogin) {
+        String account = userLogin.getAccount();
+        useDao.updateName(account);
+        return BaseResult.success("用户修改姓名成功");
     }
 
     private BaseResult md5Login(UserLogin userLogin, User user, HttpSession session) {

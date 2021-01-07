@@ -22,8 +22,8 @@ public class MovieServiceImpl implements MovieService {
     public MovieDao movieeDao;
 
     @Override
-    public List<Movie> getAllMovie(PageSetting pageSetting) {
-        Page page=PageHelper.startPage(pageSetting.getPageNum(), pageSetting.getPageSize());
+    public List<Movie> getPageMovie(PageSetting pageSetting) {
+        Page page = PageHelper.startPage(pageSetting.getPageNum(), pageSetting.getPageSize());
         List<Movie> movies = movieeDao.selectAllMovie();
         PageInfo pageInfo = new PageInfo(movies);
 

@@ -7,3 +7,11 @@ export const geeTest = (params) => {
 export const memberLogin = (params) => {
     return http.fetchPost('/api/member/login', params)
 }
+// 分页电影
+export const getPageMovie = (params) => {
+    return http.fetchPost('/api/movie/getPageMovie', params)
+}
+// 用户信息
+export const userInfo = (params) => {
+    return http.fetchGet('/api/member/checkLogin', params)
+}

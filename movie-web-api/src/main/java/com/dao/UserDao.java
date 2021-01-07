@@ -20,4 +20,19 @@ public interface UserDao {
      */
     User selectByName(String name);
 
+    /**
+     * 根据姓名更新用户名
+     *
+     * @param name 姓名
+     * @return
+     */
+    int updateName(String name);
+
+    /**
+     * 注册用户
+     *
+     * @param user 用户信息
+     * @return
+     */
+    int register(User user);
 }

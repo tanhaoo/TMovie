@@ -2,6 +2,7 @@ package com.controller;
 
 import com.common.utils.GeeTestLib;
 import com.pojo.BaseResult;
+import com.pojo.User;
 import com.pojo.UserLogin;
 import com.service.UserService;
 import io.swagger.annotations.Api;
@@ -56,7 +57,15 @@ public class UserController {
         return baseResult;
     }
 
+    @PostMapping("updateName")
+    @ApiOperation("修改姓名")
+    public BaseResult updateName(@RequestBody UserLogin userLogin) {
+        return userService.updateName(userLogin);
+    }
 
-
-
+    @PostMapping("register")
+    @ApiOperation("用户注册 ")
+    public BaseResult register(@RequestBody User user) {
+        return userService.register(user);
+    }
 }

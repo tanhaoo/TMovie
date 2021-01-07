@@ -8,5 +8,22 @@
         where user_name = #{name}
     </select>
 
+    <!-- 通过name修改name -->
+    <update id="updateName">
+     update User
+     set user_name=#{name} where user_name=#{name}
+    </update>
+
+    <!-- 通过name修改密码 -->
+    <update id="updatePassword">
+     update User
+     set password=#{password} where user_name=#{name}
+    </update>
+
+    <!-- 用户注册 -->
+    <insert id="register" parameterType="com.pojo.User">
+        insert into tb_member(user_name,password,phone, sex, img,created, updated)
+        values (#{user_name},#{password},#{phone},#{sex}, #{img},  #{created}, #{updated})
+    </insert>
 
 </mapper>
